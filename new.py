@@ -2,7 +2,6 @@ import os
 from operator import itemgetter
 
 def main(path):
-    # BASE = os.getcwd()
     file_list = []
 
     for file in os.listdir(path):
@@ -16,11 +15,6 @@ def main(path):
     
     with open(os.path.join("solution.txt"), "w", encoding='utf-8') as f:
         for file in sorted_list:
-            # line_break = "\n"
-            # line_break_num = 2
-            
-            # if sorted_list.index(file) == len(sorted_list)-1:
-                # line_break_num = 0
             total = f"имя: {file[1]}\nкол-во строк: {file[0]}\n{file[2].strip()}\n\n"
             f.write(total)
 
